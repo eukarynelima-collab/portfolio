@@ -1,405 +1,564 @@
-<!DOCTYPE html>
+  
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karyne Lima - Produção de Vídeos</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        /* Custom CSS extracted from index.css */
-        :root {
-            --color-background: #0a0a0a;
-            --color-foreground: #ffffff;
-            --color-primary: #9333ea;
-            --color-secondary: #f97316;
-        }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tefinha Barbearia" />
+    <title>Tefinha Barbearia</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="navbar" aria-label="Navegação principal">
+        <button
+          class="mobile-menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        body {
-            font-family: 'Outfit', sans-serif;
-            background-color: var(--color-background);
-            color: var(--color-foreground);
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Syne', sans-serif;
-        }
-
-        .glass {
-            backdrop-filter: blur(24px);
-            background-color: rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-        }
-
-        .neon-text {
-            text-shadow: 0 0 10px rgba(168, 85, 247, 0.5), 0 0 20px rgba(168, 85, 247, 0.3);
-        }
-
-        .neon-box {
-            box-shadow: 0 0 15px rgba(168, 85, 247, 0.2);
-        }
-
-        .text-gradient-primary {
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            background-image: linear-gradient(to right, #c084fc, #9333ea);
-        }
-        
-        .animate-spin-slow {
-            animation: spin 3s linear infinite;
-        }
-        
-        @keyframes spin {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Scroll behavior */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
-</head>
-<body class="antialiased">
-
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 py-6 transition-all duration-300">
-        <div class="container mx-auto px-4 flex justify-center">
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex items-center gap-8 px-8 py-3 rounded-full glass bg-black/40 shadow-[0_0_15px_rgba(168,85,247,0.15)]">
-                <a href="#home" class="text-sm font-medium text-white/80 hover:text-white hover:text-shadow-neon transition-all tracking-wide font-display">INICIO</a>
-                <a href="#about" class="text-sm font-medium text-white/80 hover:text-white hover:text-shadow-neon transition-all tracking-wide font-display">SOBRE MIM</a>
-                <a href="#portfolio" class="text-sm font-medium text-white/80 hover:text-white hover:text-shadow-neon transition-all tracking-wide font-display">PORTFOLIO</a>
-                <a href="#contact" class="text-sm font-medium text-white/80 hover:text-white hover:text-shadow-neon transition-all tracking-wide font-display">CONTATO</a>
-            </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden flex justify-between items-center w-full px-4 glass rounded-xl py-2">
-                <span class="font-display font-bold text-white text-xl">KL</span>
-                <button id="mobile-menu-btn" class="p-2 text-white">
-                    <i data-lucide="menu"></i>
-                </button>
-            </div>
+        <div class="nav-group nav-group-left">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#planos">Planos por Assinatura</a>
         </div>
 
-        <!-- Mobile Menu Overlay -->
-        <div id="mobile-menu" class="hidden absolute top-20 left-4 right-4 p-6 rounded-2xl glass flex-col gap-4 items-center md:hidden">
-            <a href="#home" class="text-lg font-medium text-white w-full text-center py-2 border-b border-white/10">INICIO</a>
-            <a href="#about" class="text-lg font-medium text-white w-full text-center py-2 border-b border-white/10">SOBRE MIM</a>
-            <a href="#portfolio" class="text-lg font-medium text-white w-full text-center py-2 border-b border-white/10">PORTFOLIO</a>
-            <a href="#contact" class="text-lg font-medium text-white w-full text-center py-2">CONTATO</a>
+        <a class="brand" href="#inicio" aria-label="Tefinha Barbearia">
+          <img
+            src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-1.png"
+            alt="Tefinha Barbearia"
+          />
+        </a>
+
+        <div class="nav-group nav-group-right">
+          <a href="#localizacao">Localização</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#time">Time</a>
+          <a
+            class="whatsapp"
+            href="https://wa.me/5563991396063?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Tefinha%20Barbearia."
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Fale conosco pelo WhatsApp"
+          >
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-2.png?w=52"
+              alt=""
+            />
+          </a>
         </div>
-    </nav>
+      </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="min-h-screen flex items-center justify-center relative pt-20 overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute inset-0 z-0 pointer-events-none">
-            <div class="absolute top-1/4 left-1/4 w-64 h-64 bg-purple-600/20 rounded-full blur-[100px]"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-orange-500/20 rounded-full blur-[100px]"></div>
+      <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <nav aria-label="Navegação mobile">
+          <a href="#inicio">Início</a>
+          <a href="#servicos">Serviços</a>
+          <a href="#planos">Planos por Assinatura</a>
+          <a href="#localizacao">Localização</a>
+          <a href="#clientes">Clientes</a>
+          <a href="#time">Time</a>
+          <a
+            class="mobile-menu-whatsapp"
+            href="https://wa.me/5563991396063?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Tefinha%20Barbearia."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-content">
+          <h1 id="hero-title">
+            <span class="hero-line">Agende uma</span>
+            <span class="hero-line hero-middle-line">
+              <span class="experience">
+                <span class="experience-text">experiência</span>
+              </span><span> na</span>
+            </span>
+            <span class="hero-line">Tefinha Barbearia</span>
+          </h1>
+
+          <a
+            class="hero-button"
+            href="https://wa.me/5563991396063?text=Agendar%20experi%C3%AAncia%20na%20Tefinha%20Barbearia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Agendar experiência na Tefinha Barbearia
+          </a>
+        </div>
+      </section>
+      <section class="stats" aria-label="Números da Tefinha Barbearia">
+        <div class="stat-item">
+          <strong class="stat-number" data-counter="50000">+50.000</strong>
+          <span class="stat-label">atendimentos</span>
+        </div>
+        <div class="stat-item">
+          <strong class="stat-number" data-counter="200">+200</strong>
+          <span class="stat-label">membros do clube</span>
+        </div>
+        <div class="stat-item">
+          <strong class="stat-number" data-counter="3">+3</strong>
+          <span class="stat-label">anos de mercado</span>
+        </div>
+        <div class="stat-item">
+          <strong class="stat-number" data-counter="17">+17</strong>
+          <span class="stat-label">serviços disponíveis</span>
+        </div>
+      </section>
+      <section class="services-section" id="servicos" aria-labelledby="services-title">
+        <h2 id="services-title">Serviços</h2>
+
+        <div class="services-carousel">
+          <button
+            class="carousel-arrow carousel-arrow-prev"
+            type="button"
+            aria-label="Ver serviços anteriores"
+          >
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-30.png?w=72"
+              alt=""
+            />
+          </button>
+
+          <div class="services-viewport">
+            <div class="services-track"></div>
+          </div>
+
+          <button
+            class="carousel-arrow carousel-arrow-next"
+            type="button"
+            aria-label="Ver próximos serviços"
+          >
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-29.png?w=72"
+              alt=""
+            />
+          </button>
         </div>
 
-        <div class="container mx-auto px-4 z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-left animate-fade-in-left">
-                <h2 class="text-lg md:text-xl font-medium text-white/80 mb-2 tracking-widest uppercase">Portfolio</h2>
-                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-none mb-4 -tracking-wide">
-                    <span class="text-white block">KARYNE</span>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white neon-text block -mt-2 md:-mt-4">LIMA</span>
-                </h1>
-                <div class="flex items-center gap-4 mb-8">
-                    <span class="h-[1px] w-12 bg-orange-500"></span>
-                    <h3 class="text-xl md:text-2xl font-medium text-orange-500">Produção de Vídeos</h3>
-                </div>
-                
-                <p class="text-gray-400 max-w-md mb-8 text-lg leading-relaxed">
-                    Roteiros estratégicos, gravação profissional e edição cinematográfica para eventos e empresas.
-                </p>
+        <button class="mobile-services-more" type="button">
+          Ver mais serviços
+        </button>
+      </section>
+      <section class="club-section" id="planos" aria-labelledby="club-title">
+        <div class="club-container">
+          <h2 id="club-title">Tefinha <span>Club</span></h2>
 
-                <a href="#portfolio" class="inline-flex items-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-[0_0_20px_rgba(249,115,22,0.4)] hover:shadow-[0_0_30px_rgba(249,115,22,0.6)] transition-all hover:scale-105">
-                    PORTFÓLIO
-                    <i data-lucide="play" class="w-5 h-5 fill-current"></i>
-                </a>
+          <div class="club-intro">
+            <p class="club-headline">
+              O nosso <span>clube de assinaturas</span> é pra você que quer:
+            </p>
+
+            <ul class="club-benefits">
+              <li>Manter seu visual alinhado sempre</li>
+              <li>Praticidade no pagamento</li>
+              <li>Ter uma economia inteligente</li>
+              <li>Ter previsibilidade de gastos</li>
+              <li>Ter benefícios exclusivos</li>
+            </ul>
+          </div>
+
+          <p class="club-summary">
+            <span>No Tefinha Club você se mantém</span><br />
+            sempre alinhado, gastando menos.
+          </p>
+
+          <p class="club-invitation">Assine um de nossos planos:</p>
+
+          <div class="plans-grid">
+            <article class="plan-card">
+              <div class="plan-content">
+                <h3>Corte ilimitado</h3>
+                <p class="plan-days">Segunda à sexta</p>
+                <ul class="plan-features">
+                  <li>Penteado</li>
+                  <li>Pezinho</li>
+                  <li>Corte seu cabelo quantas vezes quiser</li>
+                </ul>
+                <p class="plan-price">R$99,90 <span>mensais</span></p>
+                <button class="plan-button" type="button">Assinar plano</button>
+              </div>
+            </article>
+
+            <article class="plan-card plan-card-popular">
+              <span class="popular-ribbon">Mais popular</span>
+              <div class="plan-content">
+                <h3>Corte e Barba</h3>
+                <p class="plan-days">Segunda à sexta</p>
+                <ul class="plan-features">
+                  <li>Corte seu cabelo quantas vezes quiser</li>
+                  <li>Faça sua barba quantas vezes quiser</li>
+                  <li>Pezinho e Penteado</li>
+                </ul>
+                <p class="plan-price">R$169,90 <span>mensais</span></p>
+                <button class="plan-button" type="button">Assinar plano</button>
+              </div>
+            </article>
+
+            <article class="plan-card">
+              <div class="plan-content">
+                <h3>Barba Terapia</h3>
+                <p class="plan-days">Segunda à sexta</p>
+                <ul class="plan-features">
+                  <li>Pezinho</li>
+                  <li>Faça sua barba quantas vezes quiser</li>
+                </ul>
+                <p class="plan-price">R$99,90 <span>mensais</span></p>
+                <button class="plan-button" type="button">Assinar plano</button>
+              </div>
+            </article>
+
+            <article class="plan-card">
+              <div class="plan-content">
+                <h3>Plano One</h3>
+                <p class="plan-days">Segunda à sexta</p>
+                <ul class="plan-features">
+                  <li>Corte único ao mês</li>
+                </ul>
+                <p class="plan-price">R$49,90 <span>mensais</span></p>
+                <button class="plan-button" type="button">Assinar plano</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section
+        class="location-section"
+        id="localizacao"
+        aria-labelledby="location-title"
+      >
+        <h2 id="location-title">Nossa <span>Localização</span></h2>
+
+        <div class="location-card">
+          <div class="location-photo">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-12.png"
+              alt="Fachada da Tefinha Barbearia"
+            />
+          </div>
+
+          <div class="location-info">
+            <div class="location-detail">
+              <img
+                class="location-icon-image"
+                src="https://img.icons8.com/ios/50/ffffff/marker--v1.png"
+                alt=""
+              />
+              <p>
+                Quadra 103 Norte, Avenida LO 02, conjunto 04,<br />
+                lote 01 - E Condomínio Pátio 103 norte, Sala<br />
+                Comercial 04
+              </p>
             </div>
 
-            <div class="relative flex justify-center animate-fade-in-right">
-                <div class="relative w-80 h-80 md:w-[500px] md:h-[500px]">
-                    <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-600 rounded-[2rem] rotate-6 opacity-20 blur-xl"></div>
-                    <div class="absolute inset-0 border-2 border-white/10 rounded-[2rem] -rotate-3"></div>
-                    
-                    <div class="absolute inset-0 rounded-[2rem] overflow-hidden border border-white/10 shadow-2xl neon-box bg-[#1a1a1a]">
-                       <img src="https://convidatasshop.wordpress.com/wp-content/uploads/2025/11/f3474dce-637a-4aa3-89c3-245cb5cb30dc.jpg?w=683" alt="Karyne Lima" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-500">
-                       <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
-                       
-                       <div class="absolute bottom-6 left-6 right-6 p-4 glass rounded-xl border-l-4 border-orange-500">
-                         <h4 class="text-white font-bold text-lg">Karyne Lima</h4>
-                         <p class="text-white/70 text-sm">Videomaker & Editora</p>
-                       </div>
-                    </div>
-                </div>
+            <div class="location-detail">
+              <img
+                class="location-icon-image"
+                src="https://img.icons8.com/ios/50/ffffff/clock--v1.png"
+                alt=""
+              />
+              <p>
+                Seg a Sex: 09h às 20h<br />
+                Sáb: 09h às 16h
+              </p>
             </div>
+
+            <a
+              class="maps-button"
+              href="https://www.google.com/maps/search/?api=1&amp;query=Quadra%20103%20Norte%20Avenida%20LO%2002%20Condom%C3%ADnio%20P%C3%A1tio%20103%20Norte%20Palmas"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Abrir no Google Maps
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
+      <section
+        class="testimonials-section"
+        id="clientes"
+        aria-labelledby="testimonials-title"
+      >
+        <h2 id="testimonials-title">O que nossos clientes dizem:</h2>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-black/50 relative">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row gap-16 items-center">
-                <div class="w-full md:w-1/2 relative">
-                    <div class="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-2xl relative group">
-                        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/40 to-black/80 z-10"></div>
-                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=2600&auto=format&fit=crop')] bg-cover bg-center opacity-60 grayscale group-hover:grayscale-0 transition-all duration-700"></div>
-                        
-                        <div class="absolute inset-0 z-20 flex flex-col items-center justify-center">
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="p-6 glass rounded-xl flex flex-col items-center gap-2 hover:bg-purple-900/20 transition-colors">
-                                    <i data-lucide="pen-tool" class="w-8 h-8 text-purple-400"></i>
-                                    <span class="text-white font-display text-sm">Roteiro</span>
-                                </div>
-                                <div class="p-6 glass rounded-xl flex flex-col items-center gap-2 hover:bg-purple-900/20 transition-colors">
-                                    <i data-lucide="camera" class="w-8 h-8 text-orange-400"></i>
-                                    <span class="text-white font-display text-sm">Gravação</span>
-                                </div>
-                                <div class="p-6 glass rounded-xl flex flex-col items-center gap-2 hover:bg-purple-900/20 transition-colors">
-                                    <i data-lucide="film" class="w-8 h-8 text-blue-400"></i>
-                                    <span class="text-white font-display text-sm">Edição</span>
-                                </div>
-                                <div class="p-6 glass rounded-xl flex flex-col items-center gap-2 hover:bg-purple-900/20 transition-colors">
-                                    <i data-lucide="video" class="w-8 h-8 text-pink-400"></i>
-                                    <span class="text-white font-display text-sm">Direção</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-white">Sobre Mim</h2>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
-                        Olá! Sou <span class="text-white font-bold">Karyne Lima</span>. Transformo ideias em narrativas visuais impactantes.
-                    </p>
-                    <p class="text-gray-400 mb-8 leading-relaxed">
-                        Com experiência em produção audiovisual para eventos e empresas, eu cuido de todo o processo criativo: desde a concepção do roteiro, passando pela captação de imagens de alta qualidade, até a edição final dinâmica e envolvente. Meu objetivo é contar sua história de forma única e moderna.
-                    </p>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 p-4 rounded-lg border border-white/5 bg-white/5 hover:border-purple-500/30 transition-colors">
-                            <div class="w-2 h-full bg-purple-500 rounded-full"></div>
-                            <div>
-                                <h4 class="text-white font-bold">Visão Estratégica</h4>
-                                <p class="text-sm text-gray-400">Vídeos pensados para engajar e converter.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 p-4 rounded-lg border border-white/5 bg-white/5 hover:border-orange-500/30 transition-colors">
-                            <div class="w-2 h-full bg-orange-500 rounded-full"></div>
-                            <div>
-                                <h4 class="text-white font-bold">Estética Moderna</h4>
-                                <p class="text-sm text-gray-400">Design visual alinhado com as tendências atuais.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="testimonials-grid">
+          <article class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar avatar-rose" aria-hidden="true">MO</span>
+              <div>
+                <h3>Mariana Oliveira</h3>
+                <p class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              </div>
             </div>
+            <p class="testimonial-comment">
+              Sempre acompanhando meu marido enquanto ele recebe um excelente
+              atendimento. Dá pra perceber o cuidado e compromisso com cada
+              cliente. Um ambiente abençoado por Deus.
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar avatar-gray" aria-hidden="true">BB</span>
+              <div>
+                <h3>Baltazar Baltazar</h3>
+                <p class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              </div>
+            </div>
+            <p class="testimonial-comment">
+              A Tefinha é uma profissional de mão cheia, super atenciosa e com um
+              talento incrível para cortes e barbas. Fiquei extremamente
+              satisfeito com o meu corte. Todos os profissionais realmente
+              entendem o que o cliente quer e entregam um resultado impecável.
+              A qualidade dos produtos utilizados também é notável, deixando o
+              cabelo e a barba macios e bem cuidados. Além do serviço de alta
+              qualidade, o atendimento é excelente. Se você está procurando uma
+              barbearia de confiança na zona norte de Palmas, com certeza a
+              Tefinha Barbearia é o lugar certo. Recomendo de olhos fechados!
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar avatar-blue" aria-hidden="true">RG</span>
+              <div>
+                <h3>Reynnaldo Garcia Silva Rei</h3>
+                <p class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              </div>
+            </div>
+            <p class="testimonial-comment">
+              Trabalho de excelência, ambiente acolhedor e climatizado,
+              profissionais extremamente dedicados... muito bom ter essa
+              experiência de ser cliente da Tefinha Barbearia.
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar avatar-charcoal" aria-hidden="true">FL</span>
+              <div>
+                <h3>Fellipe Landim</h3>
+                <p class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              </div>
+            </div>
+            <p class="testimonial-comment">
+              Ótimo ambiente, atendimento personalizado, barbeiros super
+              educados, bem humorados, ar condicionado funcionando perfeitamente,
+              barbearia acolhedora, muito limpa e organizada.
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar avatar-gold" aria-hidden="true">CS</span>
+              <div>
+                <h3>Chrislânya Silva</h3>
+                <p class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              </div>
+            </div>
+            <p class="testimonial-comment">
+              A Tefinha foi a única barbearia em Palmas que encontrei confiança
+              para cortar meu cabelo cacheado, quem sabe: sabe! A melhor em
+              atendimento, conforto e segurança. Além de pontualidade que conta
+              muito. Indico sempre, não tem erro.
+            </p>
+          </article>
+
+          <article class="testimonial-card">
+            <div class="testimonial-header">
+              <span class="testimonial-avatar avatar-red" aria-hidden="true">MV</span>
+              <div>
+                <h3>Marcus Vinicius Silva</h3>
+                <p class="testimonial-stars" aria-label="5 de 5 estrelas">★★★★★</p>
+              </div>
+            </div>
+            <p class="testimonial-comment">
+              A melhor barbearia de Palmas! O atendimento é de excelência, com
+              uma equipe extremamente receptiva, sempre disposta a oferecer o
+              melhor serviço possível. O acolhimento faz toda a diferença — você
+              se sente valorizado desde o momento em que entra até a hora de sair.
+              Um lugar que realmente preza pela qualidade e pelo cuidado com o
+              cliente.
+            </p>
+          </article>
         </div>
-    </section>
+      </section>
+      <section class="team-section" id="time" aria-labelledby="team-title">
+        <h2 id="team-title">
+          <span>O melhor time</span> de Palmas, Tocantins
+        </h2>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="py-20 relative">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">
-                    Meus <span class="text-orange-500 neon-text">Trabalhos</span>
-                </h2>
-                <p class="text-gray-400 max-w-2xl mx-auto">
-                    Confira alguns dos meus projetos recentes. Reels, Stories e coberturas de eventos com qualidade cinematográfica.
-                </p>
+        <div class="team-grid">
+          <article class="team-member">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-25.png"
+              alt="Tefinha, barbeira da Tefinha Barbearia"
+            />
+            <div class="team-member-info">
+              <h3>Tefinha</h3>
+              <p>Chefe e Barbeira há +8 anos</p>
             </div>
+          </article>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="portfolio-grid">
-                <!-- Video Cards will be inserted here by JS -->
+          <article class="team-member">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-20.png"
+              alt="Ghabriel, barbeiro da Tefinha Barbearia"
+            />
+            <div class="team-member-info">
+              <h3>Ghabriel</h3>
+              <p>Barbeiro há +X anos</p>
             </div>
+          </article>
+
+          <article class="team-member">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-21.png"
+              alt="Samuel, barbeiro da Tefinha Barbearia"
+            />
+            <div class="team-member-info">
+              <h3>Samuel</h3>
+              <p>Barbeiro há +X anos</p>
+            </div>
+          </article>
+
+          <article class="team-member">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-22.png"
+              alt="Lucas, barbeiro da Tefinha Barbearia"
+            />
+            <div class="team-member-info">
+              <h3>Lucas</h3>
+              <p>Barbeiro há +X anos</p>
+            </div>
+          </article>
+
+          <article class="team-member">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-23.png"
+              alt="Maikon, barbeiro da Tefinha Barbearia"
+            />
+            <div class="team-member-info">
+              <h3>Maikon</h3>
+              <p>Barbeiro há +X anos</p>
+            </div>
+          </article>
+
+          <article class="team-member">
+            <img
+              src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/inserir-um-titulo-24.png"
+              alt="Fabrício, barbeiro da Tefinha Barbearia"
+            />
+            <div class="team-member-info">
+              <h3>Fabrício</h3>
+              <p>Barbeiro há +X anos</p>
+            </div>
+          </article>
         </div>
-    </section>
+      </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-1/2 h-full bg-purple-900/5 skew-x-12 pointer-events-none"></div>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <nav class="footer-navigation" aria-label="Navegação do rodapé">
+          <div>
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#planos">Planos</a>
+          </div>
+          <div>
+            <a href="#localizacao">Localização</a>
+            <a href="#clientes">Clientes</a>
+            <a href="#time">Time</a>
+          </div>
+        </nav>
 
-        <div class="container mx-auto px-4 relative z-10">
-            <div class="grid md:grid-cols-2 gap-16">
-                <div>
-                    <h2 class="text-4xl font-bold mb-6 text-white">
-                        Vamos criar algo <br/>
-                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-purple-600">INCRÍVEL?</span>
-                    </h2>
-                    <p class="text-gray-400 mb-8 text-lg">
-                        Estou pronta para levar sua marca ou evento para o próximo nível com vídeos de alta qualidade. Entre em contato!
-                    </p>
-
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-purple-400 group-hover:text-white group-hover:bg-purple-600 transition-all">
-                                <i data-lucide="message-circle" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">WhatsApp</p>
-                                <p class="text-white font-medium">(63) 99246-5372</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-purple-400 group-hover:text-white group-hover:bg-purple-600 transition-all">
-                                <i data-lucide="mail" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Email</p>
-                                <p class="text-white font-medium">eukarynelima@gmail.com</p>
-                            </div>
-                        </div>
-
-                        <div class="flex items-center gap-4 group">
-                            <div class="w-12 h-12 rounded-full glass flex items-center justify-center text-purple-400 group-hover:text-white group-hover:bg-purple-600 transition-all">
-                                <i data-lucide="instagram" class="w-6 h-6"></i>
-                            </div>
-                            <div>
-                                <p class="text-sm text-gray-500">Instagram</p>
-                                <p class="text-white font-medium">@eukarynelima</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="glass p-8 rounded-2xl border border-white/10 shadow-[0_0_30px_rgba(168,85,247,0.1)]">
-                    <form id="contact-form" class="space-y-6">
-                        <div>
-                            <label class="block text-white text-sm font-medium mb-2">Nome</label>
-                            <input type="text" id="name" required class="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:border-purple-500 focus:outline-none transition-colors" placeholder="Seu nome">
-                        </div>
-                        <div>
-                            <label class="block text-white text-sm font-medium mb-2">Email</label>
-                            <input type="email" id="email" required class="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:border-purple-500 focus:outline-none transition-colors" placeholder="seu@email.com">
-                        </div>
-                        <div>
-                            <label class="block text-white text-sm font-medium mb-2">Mensagem</label>
-                            <textarea id="message" required rows="4" class="w-full bg-black/50 border border-white/10 rounded-lg p-3 text-white focus:border-purple-500 focus:outline-none transition-colors" placeholder="Conte sobre seu projeto..."></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-gradient-to-r from-purple-600 to-purple-800 hover:from-purple-500 hover:to-purple-700 text-white py-4 rounded-lg text-lg font-bold shadow-lg shadow-purple-900/20 flex items-center justify-center gap-2 transition-all">
-                            Enviar Mensagem <i data-lucide="send" class="w-5 h-5"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
+        <div class="footer-brand">
+          <img
+            src="https://convidatasshop.wordpress.com/wp-content/uploads/2026/07/photoroom_20260725_172502.png"
+            alt="Tefinha Barbearia"
+          />
+          <div class="footer-socials">
+            <a
+              href="https://www.instagram.com/tefinha_barbearia/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="footer-social-logo"
+                src="https://img.icons8.com/ios-filled/50/ffffff/instagram-new.png"
+                alt=""
+              />
+              @tefinha_barbearia
+            </a>
+            <a
+              href="https://wa.me/5563991396063"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="footer-social-logo"
+                src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png"
+                alt=""
+              />
+              63 99139-6063
+            </a>
+          </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer class="py-8 text-center text-gray-600 text-sm border-t border-white/5 glass mt-12">
-        <p>© 2025 Karyne Lima. Todos os direitos reservados.</p>
+        <div class="footer-details">
+          <div class="footer-detail">
+            <img
+              class="location-icon-image"
+              src="https://img.icons8.com/ios/50/ffffff/marker--v1.png"
+              alt=""
+            />
+            <p>
+              Quadra 103 Norte, Avenida LO 02 conjunto 04,<br />
+              lote 01 - E Condomínio Pátio 103 norte, Sala<br />
+              Comercial 04
+            </p>
+          </div>
+          <div class="footer-detail">
+            <img
+              class="location-icon-image"
+              src="https://img.icons8.com/ios/50/ffffff/clock--v1.png"
+              alt=""
+            />
+            <p>
+              Seg a Sex: 09h às 20h<br />
+              Sáb: 09h às 16h
+            </p>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <!-- Floating WhatsApp -->
-    <a href="https://wa.me/5563992465372" target="_blank" class="fixed bottom-8 right-8 z-50 flex items-center justify-center w-16 h-16 bg-[#25D366] rounded-full shadow-[0_0_20px_rgba(37,211,102,0.5)] hover:shadow-[0_0_30px_rgba(37,211,102,0.7)] transition-all hover:scale-110 cursor-pointer group">
-        <i data-lucide="message-circle" class="text-white w-8 h-8 fill-current"></i>
-        <span class="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full border-2 border-black animate-pulse"></span>
+    <a
+      class="floating-whatsapp"
+      href="https://wa.me/5563991396063?text=Ol%C3%A1%21%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20na%20Tefinha%20Barbearia."
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Agendar pelo WhatsApp"
+    >
+      <img
+        src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp--v1.png"
+        alt=""
+      />
     </a>
 
-    <script>
-        // Initialize Icons
-        lucide.createIcons();
-
-        // Navbar Scroll Effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-6');
-            } else {
-                navbar.classList.add('py-6');
-                navbar.classList.remove('py-4');
-            }
-        });
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('flex');
-        });
-
-        // Form Handler
-        document.getElementById('contact-form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            const whatsappMessage = `Olá, meu nome é ${name}. Meu email é ${email}. Mensagem: ${message}`;
-            const url = `https://wa.me/5563992465372?text=${encodeURIComponent(whatsappMessage)}`;
-            
-            window.open(url, '_blank');
-        });
-
-        // Portfolio Data
-        const videos = [
-            { title: "Parabenizando estudantes aprovados", url: "https://www.instagram.com/reel/DN38ajHj-IQ/" },
-            { title: "Visita Sandro Varejão", url: "https://www.instagram.com/reel/DNSz1P9ulry/" },
-            { title: "Vídeo Conscientização", url: "https://www.instagram.com/reel/DKfiXysv4OH/" },
-            { title: "Visita ao SESC Palmas", url: "https://www.instagram.com/reel/DJclxLMoF64/" },
-            { title: "Formatura - Fanfarristas", url: "https://www.instagram.com/reel/DOjlI2aD3PG/" },
-            { title: "Tefinha Barbearia", url: "https://www.instagram.com/reel/DHZQGW3x8_p/" },
-            { title: "Chá de bençãos", url: "https://www.instagram.com/reel/DRU9vqljyFq/" },
-            { title: "Chá de panela (Story)", url: "https://www.instagram.com/s/aGlnaGxpZ2h0OjE3ODY4NTI5Mzc0NDA1NzE4?story_media_id=3766473674216890028", isStory: true }
-        ];
-
-        // Render Portfolio
-        const portfolioGrid = document.getElementById('portfolio-grid');
-        videos.forEach(video => {
-            const card = document.createElement('div');
-            card.className = `group relative rounded-2xl overflow-hidden bg-[#1a1a1a] border border-white/10 hover:border-orange-500/50 transition-all duration-300 shadow-lg hover:shadow-orange-500/20 ${video.isStory ? 'aspect-[9/16]' : ''}`;
-            
-            if (video.isStory) {
-                card.innerHTML = `
-                    <a href="${video.url}" target="_blank" class="absolute inset-0 flex flex-col items-center justify-center bg-black hover:bg-black/90 transition-all gap-4 group cursor-pointer">
-                        <div class="w-20 h-20 rounded-full border-2 border-dashed border-pink-500 p-1 animate-spin-slow">
-                            <div class="w-full h-full rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-500"></div>
-                        </div>
-                        <span class="text-white font-bold flex items-center gap-2">
-                            Ver Story no Instagram <i data-lucide="external-link" class="w-4 h-4"></i>
-                        </span>
-                    </a>
-                    <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent z-20 pointer-events-none">
-                        <div class="flex items-center gap-2 text-xs text-white/60 uppercase tracking-wider">
-                            <span class="w-2 h-2 rounded-full bg-pink-500"></span>
-                            Instagram Story
-                        </div>
-                    </div>
-                `;
-            } else {
-                card.innerHTML = `
-                    <div class="w-full h-full flex justify-center items-center overflow-hidden min-h-[500px] bg-black">
-                        <iframe 
-                            src="${video.url}embed" 
-                            width="100%" 
-                            height="100%" 
-                            frameborder="0" 
-                            scrolling="no" 
-                            allowtransparency="true">
-                        </iframe>
-                    </div>
-                `;
-            }
-            portfolioGrid.appendChild(card);
-        });
-        
-        // Re-run icons for dynamically added content
-        lucide.createIcons();
-    </script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
+                    
